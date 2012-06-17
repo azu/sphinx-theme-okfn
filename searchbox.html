@@ -1,12 +1,8 @@
 {%- if pagename != "search" %}
-<form class="pull-left" action="{{ pathto('search') }}" method="get">
-<div class='input-prepend'>
-	<span class="add-on" style="color:#333333;">
-		Search
-	</span>
-  <input type="text" name="q" placeholder="e.g.) test" style="float: right" />
+<form class="pull-left form-inline" action="{{ pathto('search') }}" method="get">
+  <input type="text" name="q" placeholder="e.g.) test" class="span2" />
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
-</div>
+  <input type="submit" class="btn" value="検索" />
 </form>
 {%- endif %}
