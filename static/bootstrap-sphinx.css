@@ -61,6 +61,11 @@ a {
   border: 1px solid #e1e1e8;
 }
 
+.docutils.literal.file{
+    color: #4070A0;
+    background: url("./img/document_text.png") no-repeat 0 50%;
+    padding-left: 16px;
+}
 /****************** Simpler Navbar *********************/
 
 .navbar-inner {
