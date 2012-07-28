@@ -2,7 +2,6 @@
 {% set script_files = script_files + ['_static/bootstrap-css-tweaks.js'] %}
 {% set css_files = ['_static/css/bootstrap.css', '_static/css/bootstrap-responsive.css', '_static/bootstrap-sphinx.css'] + css_files %}
 
-
 {%- block extrahead %}
 {% endblock %}
 
@@ -24,7 +23,9 @@
           <img src="https://s3.amazonaws.com/assets.okfn.org/p/okfn/img/logo_28x30.png" alt="Open Knowledge Foundation logo" />
         </a>
         {% endif %}
+        {% if theme_auto_reload %}
           <button id="live-reload" class="btn btn-info">LR</button>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -76,6 +77,13 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+</script>
+{% endif %}
+{% if theme_auto_reload %}
+<script type="text/javascript">
+    jQuery(function(){
+        window.okfn.autoReload();
+    });
 </script>
 {% endif %}
 {%- endblock %}
