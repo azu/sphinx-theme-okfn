@@ -8,12 +8,12 @@ jQuery(function($){
 });
 jQuery(function($){
     // options によっては存在しない
-    if(!$("#live-reload")){
+    if(!$('#live-reload')){
         return;
     }
 
     function disableButton(){
-        $("#live-reload").addClass("disabled");
+        $('#live-reload').addClass("disabled");
     }
     var autoReload = function(){
         if (autoReload.timer){
@@ -35,7 +35,7 @@ jQuery(function($){
             req.send(null);
         }, 1000);
     };
-    $("#live-reload").click(function(){
+    $('#live-reload').click(function(){
         autoReload();
     });
     // exports
